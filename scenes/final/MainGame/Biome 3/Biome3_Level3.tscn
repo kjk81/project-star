@@ -33,7 +33,7 @@ size = Vector3(15, 3, 15)
 [node name="Level3" type="Node3D"]
 
 [node name="LevelEnder" parent="." instance=ExtResource("7_1123x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.934895, -9.536743e-07, -2.2116165)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 382.52014, -9.536743e-07, -517.55566)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_enm0d")
@@ -46,15 +46,69 @@ shadow_enabled = true
 [node name="PlayerManager" parent="." instance=ExtResource("6_k5jyb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04858756, 0, 3.947483)
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavMesh" type="NavigationRegion3D" parent="."]
+transform = Transform3D(0.9562726, 0, 0, 0, 0.9562726, 0, 0, 0, 0.9562726, 0, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_n0jqv")
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavMesh"]
+transform = Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.3, 0, 0, 0)
 use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -5.05271)
+[node name="CSGBox3D" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(0.36872467, 0, 0, 0, 1, 0, 0, 0, 1.6079819, 0, -0.5, -34.809753)
 size = Vector3(76, 1, 76)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(1.3236897, 0, 0, 0, 1, 0, 0, 0, 1.2020692, 0, -0.5, -126.40455)
+size = Vector3(76, 1, 82.84082)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(0.33811924, 0, 1.7660084, 0, 1, 0, -0.31964293, 0, 1.8680897, -77.93686, -0.5, -205.83513)
+size = Vector3(76, 1, 50)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(0.30284232, 0, 1.2810556, 0, 1, 0, -0.13359463, 0, 2.9039924, -231.8607, -0.5, -403.80307)
+size = Vector3(76, 1, 50)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 4.218, 53.74945, -0.5, -752.89197)
+size = Vector3(76, 1, 50)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(-2.7705926e-08, 0, 4.218286, 0, 1, 0, -0.6338377, 0, -1.8438713e-07, 264.6529, -0.5, -515.6256)
+size = Vector3(76, 1, 50)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(0.2509232, 0, -1.8843796, 0, 1, 0, 0.16443104, 0, 2.8755796, -288.17102, -0.5, -630.09625)
+size = Vector3(76, 1, 50)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(0.23739567, 0, -2.7670467, 0, 1, 0, 0.32193682, 0, 2.0404158, -104.489746, -0.5, -829.56604)
+size = Vector3(76, 1, 50)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(1.7521546, 0, 0, 0, 1, 0, 0, 0, 1.4449703, -158.623, -0.5, -278.352)
+size = Vector3(76, 1, 82.84082)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(1.7521546, 0, 0, 0, 1, 0, 0, 0, 1.4449703, -214.533, -0.5, -743.171)
+size = Vector3(76, 1, 82.84082)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(1.809, 0, 0, 0, 1, 0, 0, 0, 1.355, -308.052, -0.5, -513.974)
+size = Vector3(81.31738, 1, 82.84082)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(1.796083, 0, 0, 0, 1, 0, 0, 0, 2.5152156, 417.771, -0.5, -513.974)
+size = Vector3(81.31738, 1, 82.84082)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(2.886884, 0, 0, 0, 1, 0, 0, 0, 3.3164423, 60.899, -0.5, -513.974)
+size = Vector3(87.55908, 1, 82.84082)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavMesh/CSGCombiner3D"]
+transform = Transform3D(2.319309, 0, 0, 0, 1, 0, 0, 0, 1.7369542, 28.346, -0.5, -923.986)
+size = Vector3(81.31738, 1, 82.84082)
 
 [node name="WaveManager" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -48)
@@ -63,8 +117,21 @@ metadata/_custom_type_script = "uid://cs72ukacrgd4g"
 
 [node name="Wave1" type="Node3D" parent="WaveManager" node_paths=PackedStringArray("spawn_areas")]
 script = ExtResource("2_mvyfq")
-enemies = Array[PackedScene]([ExtResource("5_enm0d"), ExtResource("6_n0jqv"), ExtResource("7_ggxbb"), ExtResource("8_k5jyb")])
+enemies = Array[PackedScene]([ExtResource("6_n0jqv"), ExtResource("6_n0jqv")])
 spawn_areas = [NodePath("../SpawnArea1")]
+metadata/_custom_type_script = "uid://dr7x5nckg7bcr"
+
+[node name="Wave2" type="Node3D" parent="WaveManager" node_paths=PackedStringArray("spawn_areas")]
+script = ExtResource("2_mvyfq")
+enemies = Array[PackedScene]([ExtResource("6_n0jqv"), ExtResource("5_enm0d")])
+startDelay = 5
+spawn_areas = [NodePath("../SpawnArea2"), NodePath("../SpawnArea3")]
+metadata/_custom_type_script = "uid://dr7x5nckg7bcr"
+
+[node name="Wave3" type="Node3D" parent="WaveManager" node_paths=PackedStringArray("spawn_areas")]
+script = ExtResource("2_mvyfq")
+enemies = Array[PackedScene]([ExtResource("5_enm0d"), ExtResource("6_n0jqv"), ExtResource("7_ggxbb"), ExtResource("8_k5jyb")])
+spawn_areas = [NodePath("../SpawnArea5")]
 metadata/_custom_type_script = "uid://dr7x5nckg7bcr"
 
 [node name="Wave_Starter" type="Area3D" parent="WaveManager"]
@@ -73,10 +140,29 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WaveManager/Wave_Starter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2674, 0, -19.656963)
 shape = SubResource("BoxShape3D_ggxbb")
 debug_color = Color(0, 7.095753, 8.250874, 1)
 
 [node name="SpawnArea1" parent="WaveManager" instance=ExtResource("6_p3r0m")]
-transform = Transform3D(8.309688, 0, 0, 0, 1, 0, 0, 0, 10, -22.42935, -1.9073486e-06, 30.670176)
+transform = Transform3D(16.47, 0, 0, 0, 1, 0, 0, 0, 10, -22.42935, -1.9073486e-06, 9.366867)
+
+[node name="SpawnArea2" parent="WaveManager" instance=ExtResource("6_p3r0m")]
+transform = Transform3D(16.19, 0, 0, 0, 1, 0, 0, 0, 10, -63.03965, -1.9073486e-06, -38.146904)
+
+[node name="SpawnArea3" parent="WaveManager" instance=ExtResource("6_p3r0m")]
+transform = Transform3D(8.309688, 0, 0, 0, 1, 0, 0, 0, 10, -81.632416, -1.9073486e-06, -22.848343)
+
+[node name="SpawnArea5" parent="WaveManager" instance=ExtResource("6_p3r0m")]
+transform = Transform3D(20.66, 0, 0, 0, 1, 0, 0, 0, 17.715, -121.715485, -1.9073486e-06, -105.29108)
+
+[node name="SpawnArea6" parent="WaveManager" instance=ExtResource("6_p3r0m")]
+transform = Transform3D(20.66, 0, 0, 0, 1, 0, 0, 0, 17.715, -80.8791, -1.9073486e-06, -170.04274)
+
+[node name="SpawnArea7" parent="WaveManager" instance=ExtResource("6_p3r0m")]
+transform = Transform3D(20.66, 0, 0, 0, 1, 0, 0, 0, 17.715, -3.2030563, -1.9073486e-06, -214.81323)
+
+[node name="SpawnArea8" parent="WaveManager" instance=ExtResource("6_p3r0m")]
+transform = Transform3D(20.66, 0, 0, 0, 1, 0, 0, 0, 17.715, -30.045353, -1.9073486e-06, -225.07022)
 
 [connection signal="body_entered" from="WaveManager/Wave_Starter" to="WaveManager" method="_on_start" unbinds=1]
